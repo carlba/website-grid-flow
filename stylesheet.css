@@ -9,4 +9,46 @@ html {
      Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
    */
    font-size: 15px;
+   background-color: lightgrey;
+}
+
+body {
+  background-color:white;
+   display: grid;
+   grid-template-rows: 100px 50px 1fr 100px;
+   grid-template-areas: 
+      'header'
+      'nav'
+      'main'
+      'footer';
+   min-height: 100vh;
+   max-width: 1000px;
+   border: 1px solid green;
+   margin: 0 auto;
+   padding: 50px;
+}
+
+header {
+  grid-area: header;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
